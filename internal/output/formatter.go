@@ -6,8 +6,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/lubosberan/gh-subscribe/internal/github"
-	"github.com/lubosberan/gh-subscribe/internal/target"
+	"github.com/eyeskiller/gh-subscribe/internal/github"
+	"github.com/eyeskiller/gh-subscribe/internal/target"
 )
 
 // Formatter handles terminal output formatting

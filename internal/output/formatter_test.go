@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/lubosberan/gh-subscribe/internal/github"
-	"github.com/lubosberan/gh-subscribe/internal/target"
+	"github.com/eyeskiller/gh-subscribe/internal/github"
+	"github.com/eyeskiller/gh-subscribe/internal/target"
 )
 
 func TestPrintSuccess(t *testing.T) {

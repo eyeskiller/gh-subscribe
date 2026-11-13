@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/lubosberan/gh-subscribe/cmd"
+	"github.com/eyeskiller/gh-subscribe/cmd"
 )
 
 func main() {

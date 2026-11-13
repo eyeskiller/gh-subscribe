@@ -37,7 +37,7 @@ This feature has been [requested by the community](https://github.com/cli/cli/is
 Install using GitHub CLI:
 
 ```bash
-gh extension install lubosberan/gh-subscribe
+gh extension install eyeskiller/gh-subscribe
 ```
 
 ### Prerequisites
@@ -233,7 +233,7 @@ gh auth status
 
 ```bash
 # Clone the repository
-git clone https://github.com/lubosberan/gh-subscribe.git
+git clone https://github.com/eyeskiller/gh-subscribe.git
 cd gh-subscribe
 
 # Build the extension

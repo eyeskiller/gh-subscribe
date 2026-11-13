@@ -1,4 +1,4 @@
-module github.com/lubosberan/gh-subscribe
+module github.com/eyeskiller/gh-subscribe
 
 go 1.21
 

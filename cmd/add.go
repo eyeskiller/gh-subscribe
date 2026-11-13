@@ -6,9 +6,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/lubosberan/gh-subscribe/internal/github"
-	"github.com/lubosberan/gh-subscribe/internal/output"
-	"github.com/lubosberan/gh-subscribe/internal/target"
+	"github.com/eyeskiller/gh-subscribe/internal/github"
+	"github.com/eyeskiller/gh-subscribe/internal/output"
+	"github.com/eyeskiller/gh-subscribe/internal/target"
 	"github.com/spf13/cobra"
 )
 
