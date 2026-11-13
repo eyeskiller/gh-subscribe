@@ -50,7 +50,7 @@ func runRemove(cmd *cobra.Command, args []string) error {
 	// Parse target - if it contains repo info (URL or owner/repo#number), no detection needed
 	var t *target.Target
 	var err error
-	
+
 	if target.ContainsRepo(args[0]) {
 		// Parse directly - no repo detection needed
 		t, err = target.Parse(args[0], "", "")
@@ -63,7 +63,7 @@ func runRemove(cmd *cobra.Command, args []string) error {
 		}
 		t, err = target.Parse(args[0], owner, repo)
 	}
-	
+
 	if err != nil {
 		formatter.PrintError(err.Error())
 		return fmt.Errorf("invalid target")
