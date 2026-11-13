@@ -54,6 +54,19 @@ func Parse(input string, defaultOwner, defaultRepo string) (*Target, error) {
 	return nil, fmt.Errorf("invalid target format: %s", input)
 }
 
+// ContainsRepo returns true if the input already specifies a repository
+// (URL or owner/repo#number format) and does not need repo context.
+func ContainsRepo(input string) bool {
+	input = strings.TrimSpace(input)
+	if strings.HasPrefix(input, "http://") || strings.HasPrefix(input, "https://") {
+		return true
+	}
+	if strings.Contains(input, "#") {
+		return true
+	}
+	return false
+}
+
 func parseURL(input string) (*Target, error) {
 	u, err := url.Parse(input)
 	if err != nil {

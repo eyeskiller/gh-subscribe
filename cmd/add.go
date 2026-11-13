@@ -47,14 +47,23 @@ func runAdd(cmd *cobra.Command, args []string) error {
 
 	formatter := output.NewFormatter(os.Stdout)
 
-	// Resolve repository
-	owner, repo, err := resolveRepo(addRepo)
-	if err != nil {
-		return err
+	// Parse target - if it contains repo info (URL or owner/repo#number), no detection needed
+	var t *target.Target
+	var err error
+	
+	if target.ContainsRepo(args[0]) {
+		// Parse directly - no repo detection needed
+		t, err = target.Parse(args[0], "", "")
+	} else {
+		// Need repo context - detect first
+		owner, repo, err := resolveRepo(addRepo)
+		if err != nil {
+			formatter.PrintError(err.Error())
+			return fmt.Errorf("invalid target")
+		}
+		t, err = target.Parse(args[0], owner, repo)
 	}
-
-	// Parse target
-	t, err := target.Parse(args[0], owner, repo)
+	
 	if err != nil {
 		formatter.PrintError(err.Error())
 		return fmt.Errorf("invalid target")

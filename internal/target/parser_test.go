@@ -222,6 +222,32 @@ func TestParseOwnerRepoNumber(t *testing.T) {
 	}
 }
 
+func TestContainsRepo(t *testing.T) {
+	tests := []struct {
+		input string
+		want  bool
+	}{
+		{input: "https://github.com/cli/cli/issues/14009", want: true},
+		{input: "https://github.com/cli/cli/pull/456", want: true},
+		{input: "http://github.com/owner/repo/issues/123", want: true},
+		{input: "cli/cli#14009", want: true},
+		{input: "my-org/my-repo#123", want: true},
+		{input: "123", want: false},
+		{input: "456", want: false},
+		{input: "", want: false},
+		{input: "  https://github.com/cli/cli/issues/1  ", want: true},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.input, func(t *testing.T) {
+			got := ContainsRepo(tt.input)
+			if got != tt.want {
+				t.Errorf("ContainsRepo(%q) = %v, want %v", tt.input, got, tt.want)
+			}
+		})
+	}
+}
+
 func TestTargetString(t *testing.T) {
 	target := &Target{
 		Owner:  "cli",
