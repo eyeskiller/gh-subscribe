@@ -4,7 +4,11 @@
 
 **gh-subscribe** is a lightweight GitHub CLI extension that lets you manage subscriptions to GitHub issues and pull requests without leaving your terminal. It reuses your existing `gh` authentication and feels like a native GitHub CLI command.
 
-[![CI](https://github.com/lubosberan/gh-subscribe/actions/workflows/ci.yml/badge.svg)](https://github.com/lubosberan/gh-subscribe/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/github/v/release/eyeskiller/gh-subscribe)](https://github.com/eyeskiller/gh-subscribe/releases)
+[![codecov](https://codecov.io/gh/eyeskiller/gh-subscribe/branch/main/graph/badge.svg)](https://codecov.io/gh/eyeskiller/gh-subscribe)
+[![CI](https://github.com/eyeskiller/gh-subscribe/actions/workflows/ci.yml/badge.svg)](https://github.com/eyeskiller/gh-subscribe/actions/workflows/ci.yml)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/eyeskiller/gh-subscribe)](https://go.dev/)
+[![Downloads](https://img.shields.io/github/downloads/eyeskiller/gh-subscribe/total)](https://github.com/eyeskiller/gh-subscribe/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## The Problem
